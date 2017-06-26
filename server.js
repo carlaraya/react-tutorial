@@ -8,6 +8,5 @@ var app = connect();
 
 app.use(serveStatic(__dirname + '/dist'));
 app.use(history());
-app.listen(8081, function(){
-    console.log('Server running on 8081...');
+app.listen(process.env.PORT || 8081, function(){
 });
