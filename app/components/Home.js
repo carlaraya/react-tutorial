@@ -4,7 +4,7 @@ var Link = require('react-router-dom').Link;
 function Home() {
   return (
     <div className='home-container'>
-      <h1>Battle yo friendzzz!</h1>
+      <h1>Battle yo friendzzzzzzzzz</h1>
       <Link className='button' to='/battle'>Battle</Link>
       <br/>
       <p>
