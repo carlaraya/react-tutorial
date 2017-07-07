@@ -4,7 +4,9 @@
   "description": "Following the reacttraining.com course",
   "main": "index.js",
   "scripts": {
-    "devstart": "webpack-dev-server --open",
+    "devstart": "npm-run-all --parallel watch:server watch:build",
+    "watch:server": "nodemon server.js",
+    "watch:build": "webpack --watch",
     "postinstall": "NODE_ENV='production' webpack -p",
     "start": "node server.js"
   },
@@ -34,6 +36,8 @@
     "style-loader": "^0.18.2"
   },
   "devDependencies": {
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^4.0.2",
     "webpack-dev-server": "^2.4.5"
   }
 }
